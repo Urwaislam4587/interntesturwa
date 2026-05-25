@@ -1,0 +1,7 @@
+HAFIZ URWA ISLAM
+75 Minutes
+GROUP A 
+      QUESTION NO 1,2,3, 4, 5
+      https://github.com/Urwaislam4587/interntesturwa
+Difficulties Faced 
+as All the tasks are to be implemented manually so there was difficulty in impplenting thed logic as the first test atv invextech
