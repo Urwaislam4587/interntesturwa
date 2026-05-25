@@ -1,23 +1,15 @@
-
 let normalCount = 0;
-
 let throttleCount = 0;
-
 let debounceCount = 0;
-
-
 let isScrolling = false;
-
-let debounceTimer;
-
-
+let flag;
 
 function normalCounter(){
 
   normalCount++;
 
   document.querySelector(".normal").innerHTML =
-  `Normal Count = ${normalCount}`;
+  `Normalcount = ${normalCount}`;
 
 }
 
@@ -32,7 +24,7 @@ function throttleCounter(){
     throttleCount++;
 
     document.querySelector(".throttle").innerHTML =
-    `Throttle Count = ${throttleCount}`;
+    `Throttlecount = ${throttleCount}`;
 
     setTimeout(()=>{
 
@@ -48,22 +40,20 @@ function throttleCounter(){
 
 function debounceCounter(){
 
-  clearTimeout(debounceTimer);
+  clearTimeout(flag);
 
-  debounceTimer = setTimeout(()=>{
+  flag = setTimeout(()=>{
 
     debounceCount++;
 
     document.querySelector(".debounce").innerHTML =
-    `Debounce Count = ${debounceCount}`;
+    `Debouncecount = ${debounceCount}`;
 
   },1000);
 
 }
 
-
-
-function handleScroll(){
+function forall(){
 
   normalCounter();
 
@@ -72,7 +62,4 @@ function handleScroll(){
   debounceCounter();
 
 }
-
-
-
-window.addEventListener("scroll",handleScroll);
+window.addEventListener("scroll",forall);
